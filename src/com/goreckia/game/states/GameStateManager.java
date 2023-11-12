@@ -4,12 +4,13 @@ import java.awt.*;
 
 public class GameStateManager {
     private MainMenuState mainMenuState;
+    private ParingState paringState;
     private PlayingState playingState;
     private State currentState;
 
     public static final int MAIN_MENU = 0;
     public static final int PLAYING = 1;
-    public static final int ONLINE = 2;
+    public static final int PARING = 2;
 
 
     public GameStateManager() {
@@ -33,6 +34,9 @@ public class GameStateManager {
         switch (state) {
             case MAIN_MENU:
                 currentState = mainMenuState;
+                break;
+            case PARING:
+                currentState = new ParingState(this);
                 break;
             case PLAYING:
                 playingState = new PlayingState(this, "src/com/goreckia/game/resources/levels", "src/com/goreckia/game/resources/textures");

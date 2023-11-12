@@ -37,13 +37,13 @@ public class MainMenuState extends State {
                     currentOption = 0;
                 break;
             case KeyEvent.VK_ENTER:
-            case KeyEvent.VK_SPACE:
                 switch (currentOption) {
                     case 0 -> gsm.setStateTo(GameStateManager.PLAYING); // PLAYING
-                    case 1 -> gsm.setStateTo(GameStateManager.ONLINE); // ONLINE
+                    case 1 -> gsm.setStateTo(GameStateManager.PARING); // ONLINE
                     case 2 -> System.exit(0); // EXIT
                 }
                 break;
+            case KeyEvent.VK_SPACE:
         }
     }
 

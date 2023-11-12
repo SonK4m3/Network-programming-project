@@ -14,4 +14,7 @@ public class Constants {
     public static final int PANEL_SIZE = MAP_SIZE;
     public static final int PLAYER_STARTING_POSITION_X = 9 * HALF_CELL_SIZE;
     public static final int PLAYER_STARTING_POSITION_Y = 12 * CELL_SIZE;
+
+    public static final String SERVER_ADDRESS = "localhost";
+    public static final int SERVER_PORT = 12345;
 }
